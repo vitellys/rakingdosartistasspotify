@@ -48,8 +48,24 @@ Adicionei um novo repositório em meu perfil do Github e iniciei os comandos
 no terminal do próprio editor de código. 
 
 Esses foram os passos:
-pip install requests>git init>git add.>git commit -m "Case commit">git remote add 
-origin <https://github.com/vitellys/rakingdosartistasspotify>>git push -u origin main.
+```bash
+pip install requests
+```
+```bash
+git init
+```
+```bash
+git add.
+```
+```bash
+git commit -m "Case commit"
+```
+```bash
+git remote add origin <https://github.com/vitellys/rakingdosartistasspotify>
+```
+```bash
+git push -u origin main.
+```
 
 ## Etapa 7: Requisição do tipo POST. 
 
