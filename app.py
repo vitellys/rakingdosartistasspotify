@@ -4,16 +4,17 @@ from spotify_data import fetch_data #componentes da biblioteca Flask, há també
 application = Flask(__name__) #caminho correto para localizar os arquivos
 
 @application.route('/')
-def index():
+def index(): #executa a rota
     return render_template('index.html') 
 
 @application.route('/data')
 def data():
     try:
-        data = fetch_data()
-        return jsonify(data)
-    except Exception as e:
-        return str(e), 500  # Retorna o erro como uma resposta com status 500 (Internal Server Error)
+        data = fetch_data() #obter dados dos artistas
+        return jsonify(data) #json em http
+    except Exception as e: #indica exceções 
+        return str(e), 500  #Retorna o erro de status 500 
 
 if __name__ == '__main__':
-    application.run(debug=True, port=5000)
+    application.run(debug=True, port=5000) #indica o servidor
+

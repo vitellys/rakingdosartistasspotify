@@ -23,14 +23,14 @@ def obtain_spotify_token(): #obter o token de acesso
         print(f"Erro ao obter o token: {error_message}")
         return None
 
-def get_artist_data(token, artist_id):
+def get_artist_data(token, artist_id): #Requisição get ao api para receber informações dos artistas
     headers = {
-        'Authorization': f'Bearer {token}'
+        'Authorization': f'Bearer {token}' #token necessário para api
     }
     response = requests.get(f'https://api.spotify.com/v1/artists/{artist_id}', headers=headers)
-    return response.json()
+    return response.json() #converte json em python 
 
-def fetch_data():
+def fetch_data(): #define a lista com nomes e ids, obtem o token, cria ranking, conta os gêneros e retorna em python as respostas em json
     artists = [
         {"name": "Ed Sheeran", "id": "6eUKZXaKkcviH0Ku9w2n3V"},
         {"name": "Queen", "id": "1dfeR4HaWDbWqFHLkxsg1d"},
@@ -49,19 +49,19 @@ def fetch_data():
         {"name": "Taylor Swift", "id": "06HL4z0CvFAxyc27GXpf02"}
     ]
 
-    token = obtain_spotify_token()
+    token = obtain_spotify_token() #obter o token e se não conseguir, retorna a mensagem de erro
     if not token:
         return {'error': 'Não foi possível obter o token'}
 
     artist_data = [get_artist_data(token, artist['id']) for artist in artists]
 
-    pop_artists = sorted(
+    pop_artists = sorted( #filtra os artistas pop
         [artist for artist in artist_data if 'pop' in artist.get('genres', [])],
         key=lambda x: x['followers']['total'],
         reverse=True
     )
 
-    genre_counts = {}
+    genre_counts = {} #conta o número de artistas para cada gênero
     for artist in artist_data:
         for genre in artist.get('genres', []):
             if genre in genre_counts:
@@ -69,7 +69,7 @@ def fetch_data():
             else:
                 genre_counts[genre] = 1
 
-    common_genres = sorted(genre_counts.items(), key=lambda x: x[1], reverse=True)
+    common_genres = sorted(genre_counts.items(), key=lambda x: x[1], reverse=True) #ordena os gêneros pelo número de artistas
 
     return {
         'pop_ranking': [{
