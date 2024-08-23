@@ -6,7 +6,7 @@ headers = {"Content-Type": "application/json"}
 
 data = {
 
-"github_url": "https://github.com/vitellys/RankingSpotify",
+"github_url": "https://github.com/vitellys/rakingdosartistasspotify",
 "name": "Ellen Rebeca Simões de Albuquerque",
 
 "pop_ranking": [

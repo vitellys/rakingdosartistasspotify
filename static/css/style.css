@@ -1,93 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* importei uma fonte parecida com a do spotify */
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(182deg, #1db954, #191414); /* Degradê vertical */
-    color: #fff; /* Cor do texto, para contraste com o fundo escuro */
+    background: linear-gradient(182deg, #1db954, #191414); /* degradê inspirado nas cores do sporify */
+    color: #fff; /* cor de texto */
     display: flex;
-    justify-content: center; /* Centraliza o contêiner principal */
-    align-items: center; /* Alinha verticalmente */
-    height: 100vh; /* Altura total da visualização */
-    overflow: hidden; /* Esconde o overflow do corpo */
+    justify-content: center; /* centraliza o contêiner */
+    align-items: center; /* alinha verticalmente */
+    height: 100vh; /* altura da visualização */
+    overflow: hidden; /* esconde o overflow  */
 }
 
-/* Contêiner flexível para caixas lado a lado */
+/* contêiner para box lado a lado */
+
 .container {
     display: flex;
-    justify-content: space-between; /* Espaço entre as caixas */
-    width: 70%; /* Diminui a largura do contêiner principal */
-    max-width: 900px; /* Diminui a largura máxima do contêiner principal */
+    justify-content: space-between; /* espaço entre as caixas */
+    width: 70%; /* diminui a largura do contêiner principal */
+    max-width: 900px; /* diminui a largura máxima do contêiner principal */
     padding: 10px;
-    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    box-sizing: border-box; /* inclui padding e border no tamanho total */
 }
 
-/* Estilos para as caixas */
+/* estilos para as caixas */
 .box {
     flex: 1;
-    max-width: 42%; /* Limita a largura das caixas */
+    max-width: 42%; /* limita a largura das caixas */
     background: #121212;
-    padding: 12px; /* Reduz o padding para economizar espaço */
+    padding: 12px; /* reduz o padding para economizar espaço */
     border: 1px solid #121212;
-    border-radius: 10px; /* Reduz o raio dos cantos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais pronunciada */
-    margin: 8px; /* Reduz o espaço ao redor das caixas */
-    color: #fff; /* Cor do texto para contraste com o fundo escuro */
-    max-height: 65vh; /* Limita a altura máxima das caixas a 65% da altura da tela */
-    overflow-y: hidden; /* Permite rolar o conteúdo verticalmente */
-    scrollbar-width: thin; /* Estilo para Firefox */
-    scrollbar-color: #1db954 transparent; /* Cor da barra de rolagem no Firefox */
+    border-radius: 10px; /* reduz o raio dos cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* adiciona uma sombra mais vistosa*/
+    margin: 8px; /* reduz o espaço ao redor das caixas */
+    color: #fff; /* cor do texto */
+    max-height: 65vh; /* limita a altura máxima das caixas a 65% da altura da tela */
+    overflow-y: hidden; /* permite rolar o conteúd */
+    scrollbar-width: thin; /* estilo do scroll  */
+    scrollbar-color: #1db954 transparent; /* cor do scroll, adequei para não ficar aparente e deixar o design incômodo aos olhos*/
 }
 
-/* Rola o conteúdo quando o mouse está sobre a caixa */
+/* rola o conteúdo quando o mouse está sobre a caixa */
 .box:hover {
-    overflow-y: auto; /* Ativa a rolagem quando o mouse está sobre a caixa */
+    overflow-y: auto; /* ativa a rolagem quando o mouse está sobre a caixa */
 }
 
-/* Centraliza os títulos dentro das caixas, define o mesmo tamanho e coloca em maiúsculas */
+/* centraliza os títulos dentro das caixas, define o mesmo tamanho e coloca em maiúsculas */
 .box h1, .box h2 {
     text-align: center;
-    font-size: 1.2em; /* Diminui o tamanho da fonte para h1 e h2 */
-    text-transform: uppercase; /* Converte o texto para maiúsculas */
-    margin-bottom: 10px; /* Espaço abaixo dos títulos */
+    font-size: 1.2em; /* diminui o tamanho da fonte */
+    text-transform: uppercase; /* maiúscula */
+    margin-bottom: 10px; /* espaço abaixo dos títulos */
 }
 
-/* Remove bullets das listas */
+/* remove os marcadores que aparece antes de cada item das listas */
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0; /* para não ficar grudado nas bordas */
     margin: 0;
 }
 
-/* Estilo para itens das listas */
+/* estilo para itens das listas */
 li {
-    padding: 6px 8px; /* Ajusta o padding para tornar os itens menores */
-    background-color: inherit; /* Usa a cor de fundo da caixa */
-    border-radius: 4px; /* Arredonda os cantos */
-    transition: background-color 0.3s, transform 0.3s; /* Transição suave para efeitos */
+    padding: 6px 8px; /* Ajusta o espaço do padding para tornar os itens menores */
+    background-color: inherit; /* usa a cor de fundo da caixa */
+    border-radius: 4px; /* arredonda os cantos */
+    transition: background-color 0.3s, transform 0.3s; /* transição suave */
 }
 
-/* Efeito de destaque ao passar o mouse */
+/* efeito ao passar o mouse */
 li:hover {
-    background-color: #1f1f1f; /* Cor de fundo levemente diferente ao passar o mouse */
-    transform: scale(1.02); /* Aumenta levemente o tamanho do item ao passar o mouse */
-}
+    background-color: #1f1f1f; /* cor de fundo levemente diferente ao passar o mouse */
+    transform: scale(1.02); /* aumenta levemente o tamanho do item ao passar o mouse */
+} /* me inspirei nas listas das playlists do spotify */
 
-/* Remove a borda inferior do último item */
+/* remove a borda inferior do último item */
 li:last-child {
     border-bottom: none;
 }
 
-/* Estilos responsivos */
+/* estilos responsivos solicitados no documento */
 @media (max-width: 600px) {
     .container {
-        flex-direction: column; /* Coloca as caixas em coluna em telas pequenas */
-        align-items: center; /* Centraliza as caixas verticalmente */
+        flex-direction: column; /* coloca as caixas em coluna em telas pequenas */
+        align-items: center; /* centraliza as caixas verticalmente */
     }
 
     .box {
-        max-width: 100%; /* Largura total para dispositivos pequenos */
-        margin-bottom: 20px; /* Espaço entre as caixas */
+        max-width: 100%; /* largura total para dispositivos pequenos */
+        margin-bottom: 20px; /* espaço entre as caixas */
     }
 }

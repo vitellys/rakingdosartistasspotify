@@ -1,26 +1,26 @@
-import os
-import requests
-from dotenv import load_dotenv
+import os #variáveis de ambiente
+import requests #biblioteca requests, para requisições no http
+from dotenv import load_dotenv #carrega as variáveis com as credenciais no .env
 
 load_dotenv()
 
-SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
-SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
+spotify_app_id = os.getenv('spotify_app_id')
+spotify_app_secret = os.getenv('spotify_app_secret')
 
-def get_token():
+def obtain_spotify_token(): #obter o token de acesso
     try:
         response = requests.post('https://accounts.spotify.com/api/token', data={
             'grant_type': 'client_credentials',
-            'client_id': SPOTIFY_CLIENT_ID,
-            'client_secret': SPOTIFY_CLIENT_SECRET,
+            'client_id': spotify_app_id,
+            'client_secret': spotify_app_secret,
         })
-        # Imprime o status e o texto da resposta para depuração
+        #Imprime a resposta para a depuração
         print("Status Code:", response.status_code)
         print("Response Text:", response.text)
-        response.raise_for_status()  # Levanta um erro para status HTTP 4xx/5xx
-        return response.json()['access_token']
-    except requests.exceptions.RequestException as e:
-        print(f"Erro ao obter o token: {e}")
+        response.raise_for_status()  #Verifica se há erro 4xx/5xx
+        return response.json()['access_token'] #Aqui retorna o token de acesso
+    except requests.exceptions.RequestException as error_message:
+        print(f"Erro ao obter o token: {error_message}")
         return None
 
 def get_artist_data(token, artist_id):
@@ -49,7 +49,7 @@ def fetch_data():
         {"name": "Taylor Swift", "id": "06HL4z0CvFAxyc27GXpf02"}
     ]
 
-    token = get_token()
+    token = obtain_spotify_token()
     if not token:
         return {'error': 'Não foi possível obter o token'}
 
