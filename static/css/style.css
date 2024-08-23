@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(182deg, #1db954, #191414); /* Degradê vertical */
+    color: #fff; /* Cor do texto, para contraste com o fundo escuro */
+    display: flex;
+    justify-content: center; /* Centraliza o contêiner principal */
+    align-items: center; /* Alinha verticalmente */
+    height: 100vh; /* Altura total da visualização */
+    overflow: hidden; /* Esconde o overflow do corpo */
+}
+
+/* Contêiner flexível para caixas lado a lado */
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre as caixas */
+    width: 70%; /* Diminui a largura do contêiner principal */
+    max-width: 900px; /* Diminui a largura máxima do contêiner principal */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+/* Estilos para as caixas */
+.box {
+    flex: 1;
+    max-width: 42%; /* Limita a largura das caixas */
+    background: #121212;
+    padding: 12px; /* Reduz o padding para economizar espaço */
+    border: 1px solid #121212;
+    border-radius: 10px; /* Reduz o raio dos cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais pronunciada */
+    margin: 8px; /* Reduz o espaço ao redor das caixas */
+    color: #fff; /* Cor do texto para contraste com o fundo escuro */
+    max-height: 65vh; /* Limita a altura máxima das caixas a 65% da altura da tela */
+    overflow-y: hidden; /* Permite rolar o conteúdo verticalmente */
+    scrollbar-width: thin; /* Estilo para Firefox */
+    scrollbar-color: #1db954 transparent; /* Cor da barra de rolagem no Firefox */
+}
+
+/* Rola o conteúdo quando o mouse está sobre a caixa */
+.box:hover {
+    overflow-y: auto; /* Ativa a rolagem quando o mouse está sobre a caixa */
+}
+
+/* Centraliza os títulos dentro das caixas, define o mesmo tamanho e coloca em maiúsculas */
+.box h1, .box h2 {
+    text-align: center;
+    font-size: 1.2em; /* Diminui o tamanho da fonte para h1 e h2 */
+    text-transform: uppercase; /* Converte o texto para maiúsculas */
+    margin-bottom: 10px; /* Espaço abaixo dos títulos */
+}
+
+/* Remove bullets das listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para itens das listas */
+li {
+    padding: 6px 8px; /* Ajusta o padding para tornar os itens menores */
+    background-color: inherit; /* Usa a cor de fundo da caixa */
+    border-radius: 4px; /* Arredonda os cantos */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave para efeitos */
+}
+
+/* Efeito de destaque ao passar o mouse */
+li:hover {
+    background-color: #1f1f1f; /* Cor de fundo levemente diferente ao passar o mouse */
+    transform: scale(1.02); /* Aumenta levemente o tamanho do item ao passar o mouse */
+}
+
+/* Remove a borda inferior do último item */
+li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Coloca as caixas em coluna em telas pequenas */
+        align-items: center; /* Centraliza as caixas verticalmente */
+    }
+
+    .box {
+        max-width: 100%; /* Largura total para dispositivos pequenos */
+        margin-bottom: 20px; /* Espaço entre as caixas */
+    }
+}

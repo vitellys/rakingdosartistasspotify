@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
     <title>Artistas e Gêneros</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <script defer src="/static/script.js"></script>
 </head>
 <body>
-    <h1>Ranking de Artistas Populares</h1>
-    <ul id="artist-list"></ul> <!-- Este elemento deve estar presente -->
+    <div class="container"> 
+        <div class="box left-box">
+            <h1>Ranking de Artistas Populares</h1>
+            <ul id="artist-list"></ul><!-- Este elemento deve estar presente -->
+        </div>
 
-    <h2>Gêneros Mais Comuns</h2>
-    <ul id="genre-list"></ul> <!-- Este elemento deve estar presente -->
+        <div class="box right-box">
+            <h2>Gêneros Mais Comuns</h2>
+            <ul id="genre-list"></ul>
+        </div>
+    </div>
 </body>
 </html>
