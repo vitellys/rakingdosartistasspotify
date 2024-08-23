@@ -97,3 +97,4 @@ Primeiro:
 Enquanto pressiona 'Ctrl' clique com o botão esquerdo do mouse no link que o terminal
 resultará, aguarde a página carregar por completa e aparecerá os dados completos. 
 
+Obs: As alterações de comentários nos códigos foram aperfeiçoadas, adicionadas e simplificadas afim de deixar o código com fácil entendimento.  
