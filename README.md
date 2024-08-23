@@ -77,7 +77,9 @@ Essa foi a resposta do terminal:
 200
 {"msg":"Thank you for submitting your response."}
 
-### Etapa Final: Como executar o projeto:
+### Etapa Final: 
+
+Como executar o projeto:
 
 Primeiro:
 
