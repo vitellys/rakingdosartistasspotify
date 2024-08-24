@@ -100,7 +100,7 @@ Primeiro, abra o terminal e digite os seguintes comandos:
      ```bash
     pip install flask
     ```
-      ```bash
+  ```bash
     pip install dotenv
     ```
 - Execute o script:
