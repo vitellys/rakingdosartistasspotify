@@ -49,7 +49,13 @@ no terminal do próprio editor de código.
 
 Esses foram os passos:
 ```bash
-pip install requests flask dotenv
+pip install flask
+```
+```bash
+pip install requests
+```
+```bash
+pip install dotenv
 ```
 ```bash
 git init
@@ -81,21 +87,27 @@ Essa foi a resposta do terminal:
 
 Como executar o projeto:
 
-Primeiro:
+Primeiro, abra o terminal e digite os seguintes comandos:
 
 - Clone o repositório:
   ```bash
-  git clone https://github.com/seu-usuario/seu-repositorio.git
+  git clone https://github.com/https://github.com/vitellys/rakingdosartistasspotify.git
   ```
 - Instale as dependências:
     ```bash
-    pip install -r requirements.txt
+    pip install requests
+    ```
+     ```bash
+    pip install flask
+    ```
+      ```bash
+    pip install dotenv
     ```
 - Execute o script:
     ```bash
     python app.py
     ```
-
+    
 Enquanto pressiona 'Ctrl' clique com o botão esquerdo do mouse no link que o terminal
 resultará, aguarde a página carregar por completa e aparecerá os dados completos. 
 
