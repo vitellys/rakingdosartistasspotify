@@ -14,7 +14,7 @@ código escolhido foi o VS Code [Visual Studio Code](https://code.visualstudio.c
 
 ### Etapa 2: Criação do aplicativo.
 
-Nessa etapa houve a criação do aplicativo no [Spotify Developer Dashboard]((https://developer.spotify.com/dashboard/applications)
+Nessa etapa houve a criação do aplicativo no [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications)
 para ambientação, obtive as variáveis 'CLIENT_ID' e 'CLIENT_SECRET'.
 
 ### Etapa 3: Autenticação do App.
