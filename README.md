@@ -49,7 +49,7 @@ no terminal do próprio editor de código.
 
 Esses foram os passos:
 ```bash
-pip install requests
+pip install requests flask dotenv
 ```
 ```bash
 git init
